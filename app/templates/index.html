@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% import "macros.html" as macros %}
+{% block content %}
+
+<h1>Ay</h1>
+
+{% call macros.render_form(storyform, action_text='Start your Story', btn_class='btn btn-primary btn-block') %}
+    {{ macros.render_field(storyform.location, label_visible=false, placeholder="Starting Location")}}
+{% endcall %}
+
+{% endblock %}
